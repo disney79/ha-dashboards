@@ -1,0 +1,55 @@
+    cards:
+      - title: Energie vandaag
+        type: energy-distribution
+        link_dashboard: false
+      - type: entities
+        entities:
+          - entity: select.lilygo_rs485_marstek_user_work_mode
+            name: Marstek user work mode
+          - entity: select.lilygo_rs485_marstek_rs485_control_mode_select
+            name: Marstek RS485 Control Mode Select
+          - entity: number.lilygo_rs485_marstek_charge_to_soc
+            name: Marstek charge to SOC
+          - entity: select.lilygo_rs485_marstek_forcible_charge_discharge
+            name: Marstek forcible charge/discharge
+          - entity: number.lilygo_rs485_marstek_forcible_charge_power
+          - entity: number.lilygo_rs485_marstek_forcible_discharge_power
+            name: Marstek forcible discharge power
+          - entity: select.lilygo_rs485_marstek_backup_function
+            name: Marstek backup function
+        title: Venus Batterij 2,5
+      - title: Energie live
+        type: custom:power-flow-card
+        entities:
+          grid: sensor.p1_meter_3c39e72bd00a_active_power
+          gas: sensor.p1_meter_3c39e72bd00a_total_gas
+          battery: sensor.lilygo_rs485_marstek_ac_power
+          solar: sensor.zonnepanelen_afdak_solar_current_power
+      - type: entities
+        entities:
+          - entity: sensor.lilygo_rs485_marstek_ac_power
+            name: Marstek AC power
+          - entity: sensor.lilygo_rs485_marstek_battery_power
+            name: Marstek Battery power
+          - entity: sensor.lilygo_rs485_marstek_battery_state_of_charge
+            name: Marstek Battery State of Charge
+          - entity: sensor.lilygo_rs485_marstek_battery_voltage
+            name: Marstek Battery Voltage
+          - entity: sensor.lilygo_rs485_marstek_internal_temperature
+            name: Marstek Internal Temperature
+          - entity: sensor.lilygo_rs485_marstek_offgrid_power
+            name: Marstek offgrid power
+          - entity: sensor.lilygo_rs485_marstek_total_charging_energy
+            name: Marstek total charging energy
+          - entity: sensor.lilygo_rs485_marstek_total_discharging_energy
+            name: Marstek total discharging energy
+        title: Venus Batterij 2,5
+      - type: entities
+        entities:
+          - entity: sensor.p1_meter_3c39e72bd00a_active_power
+            name: Totale consumptie
+          - entity: sensor.p1_meter_3c39e72bd00a_active_power_l1
+            name: Meterkast oud
+          - entity: sensor.p1_meter_3c39e72bd00a_active_power_l2
+            name: Meterkast nieuw
+          - entity: sensor.p1_meter_3c39e72bd00a_active_power_l3
