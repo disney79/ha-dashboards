@@ -1,0 +1,529 @@
+  - type: sections
+    max_columns: 2
+    icon: mdi:apple
+    path: ''
+    sections:
+      - type: grid
+        cards:
+          - type: tile
+            entity: media_player.thuisbioscoop
+            name: Netflix
+            icon: phu:netflix
+            hide_state: true
+            tap_action:
+              action: perform-action
+              perform_action: media_player.select_source
+              target:
+                entity_id: media_player.thuisbioscoop
+              data:
+                source: Netflix
+            icon_tap_action:
+              action: perform-action
+              perform_action: media_player.select_source
+              target:
+                entity_id: media_player.thuisbioscoop
+              data:
+                source: Netflix
+            features_position: bottom
+            vertical: false
+          - type: tile
+            entity: media_player.thuisbioscoop
+            name: Prime Video
+            icon: phu:prime-video-alt
+            hide_state: true
+            tap_action:
+              action: perform-action
+              perform_action: media_player.select_source
+              target:
+                entity_id: media_player.thuisbioscoop
+              data:
+                source: Prime Video
+            icon_tap_action:
+              action: perform-action
+              perform_action: media_player.select_source
+              target:
+                entity_id: media_player.thuisbioscoop
+              data:
+                source: Prime Video
+            features_position: bottom
+            vertical: false
+          - type: tile
+            entity: remote.thuisbioscoop
+            tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: wakeup
+            icon: mdi:power
+            vertical: true
+            hide_state: true
+            name: ' '
+            show_entity_picture: false
+            layout_options:
+              grid_columns: 1
+              grid_rows: 2
+            icon_tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: wakeup
+            color: accent
+            features_position: bottom
+          - type: tile
+            entity: remote.thuisbioscoop
+            tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: up
+            icon: mdi:arrow-up-bold
+            vertical: true
+            hide_state: true
+            name: ' '
+            show_entity_picture: false
+            layout_options:
+              grid_columns: 1
+              grid_rows: 2
+            icon_tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: up
+            color: pink
+            features_position: bottom
+          - type: tile
+            entity: remote.thuisbioscoop
+            tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: play
+            icon: mdi:play
+            vertical: true
+            hide_state: true
+            name: ' '
+            show_entity_picture: false
+            layout_options:
+              grid_columns: 1
+              grid_rows: 2
+            icon_tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: play
+            color: accent
+            features_position: bottom
+          - type: tile
+            entity: remote.thuisbioscoop
+            tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: pause
+            icon: mdi:pause
+            vertical: true
+            hide_state: true
+            name: ' '
+            show_entity_picture: false
+            layout_options:
+              grid_columns: 1
+              grid_rows: 2
+            icon_tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: pause
+            color: accent
+            features_position: bottom
+          - type: tile
+            entity: remote.thuisbioscoop
+            tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: left
+            icon: mdi:arrow-left-bold
+            vertical: true
+            hide_state: true
+            name: ' '
+            show_entity_picture: false
+            layout_options:
+              grid_columns: 1
+              grid_rows: 2
+            icon_tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: left
+            color: pink
+            features_position: bottom
+          - type: tile
+            entity: remote.thuisbioscoop
+            tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: select
+            icon: mdi:select
+            vertical: true
+            hide_state: true
+            name: ' '
+            show_entity_picture: false
+            layout_options:
+              grid_columns: 1
+              grid_rows: 2
+            icon_tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: select
+            color: pink
+            features_position: bottom
+          - type: tile
+            entity: remote.thuisbioscoop
+            tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: right
+            icon: mdi:arrow-right-bold
+            vertical: true
+            hide_state: true
+            name: ' '
+            show_entity_picture: false
+            layout_options:
+              grid_columns: 1
+              grid_rows: 2
+            icon_tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: right
+            color: pink
+            features_position: bottom
+          - type: tile
+            entity: remote.thuisbioscoop
+            tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: menu
+            icon: mdi:menu
+            vertical: true
+            hide_state: true
+            name: ' '
+            show_entity_picture: false
+            layout_options:
+              grid_columns: 1
+              grid_rows: 2
+            icon_tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: menu
+            color: accent
+            features_position: bottom
+          - type: tile
+            entity: remote.thuisbioscoop
+            tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: skip_backward
+            icon: mdi:skip-backward
+            vertical: true
+            hide_state: true
+            name: ' '
+            show_entity_picture: false
+            layout_options:
+              grid_columns: 1
+              grid_rows: 2
+            icon_tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: skip_backward
+            color: accent
+            features_position: bottom
+          - type: tile
+            entity: remote.thuisbioscoop
+            tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: down
+            icon: mdi:arrow-down-bold
+            vertical: true
+            hide_state: true
+            name: ' '
+            show_entity_picture: false
+            layout_options:
+              grid_columns: 1
+              grid_rows: 2
+            icon_tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: down
+            color: pink
+            features_position: bottom
+          - type: tile
+            entity: remote.thuisbioscoop
+            tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: skip_forward
+            icon: mdi:skip-forward
+            vertical: true
+            hide_state: true
+            name: ' '
+            show_entity_picture: false
+            layout_options:
+              grid_columns: 1
+              grid_rows: 2
+            icon_tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: skip_forward
+            color: accent
+            features_position: bottom
+          - type: tile
+            entity: remote.thuisbioscoop
+            tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: suspend
+            icon: mdi:power-off
+            vertical: true
+            hide_state: true
+            name: ' '
+            show_entity_picture: false
+            layout_options:
+              grid_columns: 1
+              grid_rows: 2
+            icon_tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.thuisbioscoop
+              data:
+                hold_secs: 0
+                command: suspend
+            color: accent
+            features_position: bottom
+          - type: tile
+            entity: media_player.thuisbioscoop
+            name: Peaky Blinders
+            icon: mdi:pistol
+            hide_state: true
+            tap_action:
+              action: perform-action
+              perform_action: media_player.play_media
+              data:
+                media_content_type: url
+                media_content_id: https://www.netflix.com/title/80002479
+              target:
+                entity_id: media_player.thuisbioscoop
+            icon_tap_action:
+              action: perform-action
+              perform_action: media_player.play_media
+              data:
+                media_content_type: url
+                media_content_id: https://www.netflix.com/title/80002479
+              target:
+                entity_id: media_player.thuisbioscoop
+            features_position: bottom
+            vertical: false
+          - type: tile
+            entity: media_player.thuisbioscoop
+            name: denievankleef - batterij
+            icon: mdi:battery-20
+            hide_state: true
+            tap_action:
+              action: perform-action
+              perform_action: media_player.play_media
+              data:
+                media_content_type: url
+                media_content_id: youtube://www.youtube.com/watch?v=q165ZkvinaE
+              target:
+                entity_id: media_player.thuisbioscoop
+            icon_tap_action:
+              action: perform-action
+              perform_action: media_player.play_media
+              data:
+                media_content_type: url
+                media_content_id: youtube://www.youtube.com/watch?v=q165ZkvinaE
+              target:
+                entity_id: media_player.thuisbioscoop
+            features_position: bottom
+            vertical: false
+      - type: grid
+        cards:
+          - type: conditional
+            conditions: []
+            card:
+              type: custom:stack-in-card
+              mode: horizontal
+              cards:
+                - type: custom:mushroom-entity-card
+                  entity: script.tv_audio_only
+                  primary_info: none
+                  secondary_info: none
+                  layout: vertical
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    target:
+                      entity_id: script.tv_audio_only
+                - type: custom:mushroom-entity-card
+                  entity: script.tv_audio_via_nac
+                  primary_info: none
+                  secondary_info: none
+                  layout: vertical
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    target:
+                      entity_id: script.tv_audio_via_nac
+                - type: custom:mushroom-entity-card
+                  entity: script.tv_audio_via_denon_surround
+                  primary_info: none
+                  secondary_info: none
+                  layout: vertical
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    target:
+                      entity_id: script.tv_audio_via_denon_surround
+                - type: custom:mushroom-entity-card
+                  layout: vertical
+                  primary_info: none
+                  secondary_info: none
+                  icon: mdi:power
+                  entity: media_player.lg_webos_smart_tv
+                  name: LG
+                  tap_action:
+                    action: call-service
+                    service: wake_on_lan.send_magic_packet
+                    target: {}
+                    data:
+                      broadcast_port: 9
+                      mac: 64:95:6c:14:0d:66
+            grid_options:
+              columns: 12
+              rows: 1
+          - name: TV LG
+            type: custom:mini-media-player
+            entity: media_player.lg_webos_smart_tv
+            visibility:
+              - condition: state
+                entity: media_player.lg_webos_smart_tv
+                state_not: 'off'
+            toggle_power: false
+          - name: APPLE TV
+            type: custom:mini-media-player
+            entity: media_player.thuisbioscoop
+            visibility:
+              - condition: or
+                conditions:
+                  - condition: state
+                    entity: media_player.thuisbioscoop
+                    state: 'on'
+                  - condition: state
+                    entity: media_player.thuisbioscoop
+                    state: playing
+                  - condition: state
+                    entity: media_player.thuisbioscoop
+                    state: paused
+                  - condition: state
+                    entity: media_player.thuisbioscoop
+                    state: buffering
+                  - condition: state
+                    entity: media_player.thuisbioscoop
+                    state: idle
+          - name: Denon surround
+            type: custom:mini-media-player
+            entity: media_player.denon_avr_4520
+            visibility:
+              - condition: state
+                entity: media_player.denon_avr_4520
+                state_not: 'off'
+          - name: NAC stereo
+            type: custom:mini-media-player
+            entity: media_player.nacn272_a86c
+            visibility:
+              - condition: state
+                entity: media_player.lg_webos_smart_tv
+                state_not: 'off'
