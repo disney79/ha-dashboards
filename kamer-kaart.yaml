@@ -1,0 +1,73 @@
+views:
+  - type: sections
+    max_columns: 4
+    title: Huis
+    path: huis
+    icon: mdi:home
+    sections:
+      - type: grid
+        cards:
+          - type: custom:bubble-card
+            card_type: button
+            button_type: switch
+            entity: sensor.lights_office_on_count
+            name: Kantoor
+            sub_button:
+              - entity: sensor.tempkantoor_temperature
+                show_background: false
+                show_state: true
+              - entity: binary_sensor.kantoormovementsensor_presence
+                show_background: false
+                show_state: true
+              - entity: binary_sensor.deurachter_contact
+                show_background: false
+                show_state: true
+            button_action:
+              tap_action:
+                action: navigate
+                navigation_path: /dashboard-v2/2
+            tap_action:
+              action: perform-action
+              perform_action: light.toggle
+              target:
+                area_id: kantoor
+            styles: |-
+              .bubble-button-background {
+                  background-color: ${state == 0 ? 'var(--primary)' : 'orange'} !important;
+                }
+            grid_options:
+              columns: 12
+              rows: 1
+            card_layout: large
+          - type: custom:mushroom-template-card
+            secondary: |+
+              {{ states("sensor.tempkantoor_temperature") }} C
+
+              {% if (states('sensor.lights_office_on_count') | int > 0) %}
+                - {{ states("sensor.lights_office_on_count") }} lamp(en) aan 
+              {% endif %}
+
+            icon: mdi:mushroom
+            features_position: bottom
+            entity: sensor.lights_office_on_count
+            area: kantoor
+            primary: Kantoor
+            color: |-
+              {% if (states('sensor.lights_office_on_count') | int > 0) %}
+                orange
+              {% endif %}
+            badge_icon: |2-
+                {% if (is_state('binary_sensor.kantoormovementsensor_presence', 'on') ) %} 
+                  mdi:motion-sensor
+                  {% if (is_state('binary_sensor.deurachter_contact', 'on') ) %}
+                  mdi:door-open
+                  {% endif %}
+                {% endif %}
+            tap_action:
+              action: navigate
+              navigation_path: /dashboard-v2/2
+            grid_options:
+              columns: 12
+              rows: 1
+      - type: grid
+        cards: []
