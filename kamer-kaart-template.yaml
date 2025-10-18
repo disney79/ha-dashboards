@@ -1,0 +1,10 @@
+sensor:
+  - name: "lights_office_on_count"
+    icon: mdi:lightbulb
+    state: >
+      {{ states.light | list
+          |selectattr('state', 'eq', 'on') 
+          |rejectattr('entity_id', 'in', label_entities('DontCountAsLight'))
+          |selectattr('entity_id', 'in', area_entities('Kantoor'))
+          |list
+          |count}}
